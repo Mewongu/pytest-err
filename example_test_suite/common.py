@@ -20,3 +20,15 @@ def function_d():
 
 def common_function():
     raise RuntimeError("This function should fail")
+
+
+def deep_error():
+    deeper_error()
+
+
+def deeper_error():
+    deepest_error()
+
+
+def deepest_error():
+    common_function()
