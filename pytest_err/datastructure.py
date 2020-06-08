@@ -30,9 +30,9 @@ class Node:
 
     def __str__(self, indents=[], last=False):
         if indents:
-            indent_str = f"\n[{self.visits}]  " + "".join(i.value for i in indents)
+            indent_str = f"\n[{self.visits}]    " + "".join(i.value for i in indents)
         else:
-            indent_str = f"[{self.visits}]  "
+            indent_str = f"[{self.visits}]  * "
 
         rs = ""
         rs += f"{indent_str}{get_calling_function_name(self.file, self.line_no)}:{self.line_no}"
