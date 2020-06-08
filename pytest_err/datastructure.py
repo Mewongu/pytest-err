@@ -23,9 +23,10 @@ class Node:
         top, *rest = call_stack
         if top not in self.callers:
             self.callers[top] = Node(*top)
+        if top in self.callers:
+            self.callers[top].visits += 1
         if rest:
             self.callers[top].add_caller(*rest)
-        self.visits += 1
 
     def __str__(self, indents=[], last=False):
         if indents:
