@@ -22,7 +22,12 @@ Gathers information about errors in tests provides information on similarity in 
     author_email="andreas@mewongu.com",
     url="https://github.com/Mewongu/pytest_err",
     classifiers=[
-        "License :: OSI Approved :: MIT License",
+        "Development Status :: 4 - Beta",
+        "Framework :: Pytest",
         "Intended Audience :: Developers",
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+        "Programming Language :: Python :: 3",
+        "Topic :: Software Development",
+        "Topic :: Software Development :: Testing",
     ],
 )
