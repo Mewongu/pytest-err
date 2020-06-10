@@ -12,3 +12,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [setup.cfg](./setup.cfg) for ease of development
 - This changelog
 - [pre-commit-config.yaml](./.pre-commit-config.yaml) for further ease of development
+- [VISION.md](VISION.md)

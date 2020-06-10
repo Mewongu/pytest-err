@@ -18,8 +18,16 @@ def function_scopes_for_module(file: Path):
     function_scopes = IntervalKeeper()
     for fn_def in function_definitions:
         *_, last_statement = fn_def.body
-        function_scopes[fn_def.lineno : last_statement.lineno] = fn_def.name
+        finished = False
+        while not finished:
+            if hasattr(last_statement, "orelse") and last_statement.orelse:
+                last_statement = last_statement.orelse[-1]
+            elif hasattr(last_statement, "body"):
+                *_, last_statement = last_statement.body
+            else:
+                finished = True
 
+        function_scopes[fn_def.lineno : last_statement.lineno] = fn_def.name
     return function_scopes
 
 

@@ -8,6 +8,9 @@ When swapping out external dependencies (going from python2 to 3, swapping out l
 
 It was developed as a script during a 2to3 conversion on a tool working with binary data. It has since been ported to be a plugin to pytest.
 
+## Vision
+See [VISION.md](VISION.md)
+
 ## Developing
 
 ### General development
@@ -30,7 +33,7 @@ This will run the sessions defined in [noxfile.py](noxfile.py)
 
 ### Tests
 
-passta
+pass
 
 ## License
 See [LICENSE](LICENSE)
