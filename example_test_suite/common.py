@@ -18,8 +18,12 @@ def function_d():
     common_function()
 
 
-def common_function():
-    raise RuntimeError("This function should fail")
+def common_function(fail_early=True):
+    if fail_early:
+        raise RuntimeError("This function should fail early")
+
+    else:
+        raise RuntimeError("This function should fail late")
 
 
 def deep_error():

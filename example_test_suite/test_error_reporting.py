@@ -8,6 +8,7 @@ from example_test_suite.common import (
     function_c,
     function_d,
     deep_error,
+    common_function,
 )
 
 
@@ -31,12 +32,20 @@ def test_deep_error():
     deep_error()
 
 
+def test_fail_early():
+    common_function()
+
+
+def test_fail_late():
+    common_function(fail_early=False)
+
+
 def test_assert_fail():
-    with pytest.assertRaises(RuntimeError):
+    with pytest.raises(RuntimeError):
         pass
 
 
 @pytest.mark.parametrize("h", (1, 2, 3))
 def test_parametrized(h):
-    with pytest.assertRaises(RuntimeError):
+    with pytest.raises(RuntimeError):
         pass
